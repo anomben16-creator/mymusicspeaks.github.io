@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#050505">
   <meta name="description" content="Speak Jesus — A Night of Afro Praise & Worship. Tickets, contact and donations.">
   <title>Speak Jesus | My Music Speaks</title>
+
   <style>
     :root{
       --gold:#ffd21a;
@@ -15,7 +16,11 @@
       --white:#fff;
       --muted:#cfcfcf;
     }
-    *{box-sizing:border-box}
+
+    *{
+      box-sizing:border-box;
+    }
+
     body{
       margin:0;
       min-height:100vh;
@@ -25,9 +30,19 @@
         radial-gradient(circle at 50% 8%, rgba(255,210,26,.16), transparent 32%),
         linear-gradient(180deg,#030303 0%,#101010 55%,#020202 100%);
     }
-    .wrap{width:min(680px,100%);margin:0 auto;padding:20px 16px 34px}
-    .brand{text-align:center;padding:8px 0 14px}
-    .logo{
+
+    .wrap{
+      width:min(680px,100%);
+      margin:0 auto;
+      padding:20px 16px 34px;
+    }
+
+    .brand{
+      text-align:center;
+      padding:8px 0 14px;
+    }
+
+    .flyer-heading{
       width:min(330px,78vw);
       height:auto;
       display:block;
@@ -35,9 +50,28 @@
       border-radius:12px;
       mix-blend-mode:screen;
     }
-    .event-title{font-size:clamp(25px,7vw,42px);font-weight:900;letter-spacing:.08em;margin:8px 0 3px}
-    .subtitle{color:var(--gold);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
-    .date{margin:13px 0 0;font-weight:700;font-size:15px}
+
+    .event-title{
+      font-size:clamp(25px,7vw,42px);
+      font-weight:900;
+      letter-spacing:.08em;
+      margin:8px 0 3px;
+    }
+
+    .subtitle{
+      color:var(--gold);
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-size:12px;
+    }
+
+    .date{
+      margin:13px 0 0;
+      font-weight:700;
+      font-size:15px;
+    }
+
     .flyer{
       width:100%;
       display:block;
@@ -46,7 +80,12 @@
       box-shadow:0 16px 45px rgba(0,0,0,.55);
       border:1px solid rgba(255,210,26,.25);
     }
-    .buttons{display:grid;gap:13px}
+
+    .buttons{
+      display:grid;
+      gap:13px;
+    }
+
     .btn{
       display:flex;
       align-items:center;
@@ -58,63 +97,188 @@
       border-radius:15px;
       padding:16px 18px;
       box-shadow:0 8px 22px rgba(0,0,0,.28);
-      transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
+      transition:
+        transform .15s ease,
+        border-color .15s ease,
+        box-shadow .15s ease;
     }
-    .btn:hover{transform:translateY(-2px);border-color:rgba(255,210,26,.75);box-shadow:0 12px 28px rgba(0,0,0,.4)}
+
+    .btn:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,210,26,.75);
+      box-shadow:0 12px 28px rgba(0,0,0,.4);
+    }
+
     .icon{
-      width:45px;height:45px;border-radius:12px;display:grid;place-items:center;
-      background:var(--gold);color:#080808;font-size:22px;flex:none;
+      width:45px;
+      height:45px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:var(--gold);
+      color:#080808;
+      font-size:22px;
+      flex:none;
     }
-    .btn strong{display:block;font-size:16px}
-    .btn span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
-    .arrow{margin-left:auto;font-size:21px;color:var(--gold)}
-    .note{text-align:center;color:#aaa;font-size:12px;margin:20px 0 8px}
-    .social{text-align:center;margin-top:22px}
-    .social a{color:#ddd;text-decoration:none;margin:0 8px;font-size:13px}
-    .footer{text-align:center;color:#777;font-size:11px;margin-top:20px;line-height:1.6}
+
+    .btn strong{
+      display:block;
+      font-size:16px;
+    }
+
+    .btn span{
+      display:block;
+      color:var(--muted);
+      font-size:12px;
+      margin-top:3px;
+    }
+
+    .arrow{
+      margin-left:auto;
+      font-size:21px;
+      color:var(--gold);
+    }
+
+    .note{
+      text-align:center;
+      color:#aaa;
+      font-size:12px;
+      margin:20px 0 8px;
+    }
+
+    .social{
+      text-align:center;
+      margin-top:22px;
+    }
+
+    .social a{
+      color:#ddd;
+      text-decoration:none;
+      margin:0 8px;
+      font-size:13px;
+    }
+
+    .footer{
+      text-align:center;
+      color:#777;
+      font-size:11px;
+      margin-top:20px;
+      line-height:1.6;
+    }
+
     @media(max-width:430px){
-      .wrap{padding:12px 12px 28px}
-      .flyer{border-radius:14px}
-      .btn{padding:14px}
+      .wrap{
+        padding:12px 12px 28px;
+      }
+
+      .flyer{
+        border-radius:14px;
+      }
+
+      .btn{
+        padding:14px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <main class="wrap">
+
     <section class="brand">
-      <img class="flyer-heading" src="main/speaks2.jpeg" alt="Event Flyer">
+
+      <!-- TOP IMAGE -->
+      <img
+        class="flyer-heading"
+        src="speaks2.jpeg"
+        alt="Speak Jesus event flyer"
+      >
+
       <div class="event-title">SPEAK JESUS</div>
-      <div class="subtitle">A Night of Afro Praise &amp; Worship</div>
-      <div class="date">19 September 2026 · Mount Vernon, NY</div>
+
+      <div class="subtitle">
+        A Night of Afro Praise &amp; Worship
+      </div>
+
+      <div class="date">
+        19 September 2026 · Mount Vernon, NY
+      </div>
+
     </section>
 
-    <img class="flyer" src="main/speaks2.jpeg" alt="Speak Jesus event flyer">
+    <!-- MAIN EVENT FLYER -->
+    <img
+      class="flyer"
+      src="speaks2.jpeg"
+      alt="Speak Jesus event flyer"
+    >
 
+    <!-- EVENT LINKS -->
     <section class="buttons" aria-label="Event links">
-      <a class="btn" href="https://www.mymusicspeaks.org/" target="_blank" rel="noopener noreferrer">
+
+      <!-- TICKET -->
+      <a
+        class="btn"
+        href="https://www.mymusicspeaks.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div class="icon">🎟️</div>
-        <div><strong>Purchase a Ticket</strong><span>Get your ticket / event information</span></div>
+
+        <div>
+          <strong>Purchase a Ticket</strong>
+          <span>Get your ticket / event information</span>
+        </div>
+
         <div class="arrow">›</div>
       </a>
 
-      <a class="btn" href="mailto:mymusicspeaksllc@gmail.com?subject=Speak%20Jesus%20Event%20Enquiry">
+
+      <!-- EMAIL -->
+      <a
+        class="btn"
+        href="mailto:mymusicspeaksllc@gmail.com?subject=Speak%20Jesus%20Event%20Enquiry"
+      >
         <div class="icon">✉️</div>
-        <div><strong>Send Us an Email</strong><span>mymusicspeaksllc@gmail.com</span></div>
+
+        <div>
+          <strong>Send Us an Email</strong>
+          <span>mymusicspeaksllc@gmail.com</span>
+        </div>
+
         <div class="arrow">›</div>
       </a>
 
-      <a class="btn" href="https://cash.app/$AnniskaCelestine" target="_blank" rel="noopener noreferrer">
+
+      <!-- DONATION -->
+      <a
+        class="btn"
+        href="https://cash.app/$AnniskaCelestine"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div class="icon">♥</div>
-        <div><strong>Donate / Support</strong><span>Support the Speak Jesus event</span></div>
+
+        <div>
+          <strong>Donate / Support</strong>
+          <span>Support the Speak Jesus event</span>
+        </div>
+
         <div class="arrow">›</div>
       </a>
+
     </section>
 
-    <p class="note">Thank you for supporting My Music Speaks.</p>
+    <p class="note">
+      Thank you for supporting My Music Speaks.
+    </p>
 
     <div class="footer">
       © 2026 My Music Speaks LLC · Speak Jesus
     </div>
+
   </main>
+
 </body>
 </html>
