@@ -11,7 +11,7 @@
     :root {
       --gold: #ffd21a;
       --black: #050505;
-      --white: #fff;
+      --white: #ffffff;
       --muted: #cfcfcf;
     }
 
@@ -25,10 +25,11 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system,
         BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       color: var(--white);
+
       background:
         radial-gradient(
           circle at 50% 8%,
-          rgba(255, 210, 26, .16),
+          rgba(255, 210, 26, 0.16),
           transparent 32%
         ),
         linear-gradient(
@@ -45,17 +46,24 @@
       padding: 20px 16px 34px;
     }
 
-    /* TOP IMAGE */
+    /* =========================
+       SINGLE TOP IMAGE
+       ========================= */
+
     .top-image {
       width: 100%;
       max-width: 680px;
       height: auto;
       display: block;
-      margin: 0 auto 18px;
+      margin: 0 auto 20px;
       border-radius: 18px;
-      box-shadow: 0 16px 45px rgba(0, 0, 0, .55);
-      border: 1px solid rgba(255, 210, 26, .25);
+      border: 1px solid rgba(255, 210, 26, 0.25);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
     }
+
+    /* =========================
+       EVENT INFORMATION
+       ========================= */
 
     .brand {
       text-align: center;
@@ -65,14 +73,14 @@
     .event-title {
       font-size: clamp(25px, 7vw, 42px);
       font-weight: 900;
-      letter-spacing: .08em;
+      letter-spacing: 0.08em;
       margin: 8px 0 3px;
     }
 
     .subtitle {
       color: var(--gold);
       font-weight: 800;
-      letter-spacing: .12em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       font-size: 12px;
     }
@@ -82,6 +90,10 @@
       font-weight: 700;
       font-size: 15px;
     }
+
+    /* =========================
+       BUTTONS
+       ========================= */
 
     .buttons {
       display: grid;
@@ -94,36 +106,44 @@
       align-items: center;
       gap: 14px;
       text-decoration: none;
-      color: #fff;
-      background: linear-gradient(
-        135deg,
-        rgba(35, 35, 35, .95),
-        rgba(14, 14, 14, .95)
-      );
-      border: 1px solid rgba(255, 255, 255, .13);
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(35, 35, 35, 0.95),
+          rgba(14, 14, 14, 0.95)
+        );
+
+      border: 1px solid rgba(255, 255, 255, 0.13);
       border-radius: 15px;
       padding: 16px 18px;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+
       transition:
-        transform .15s ease,
-        border-color .15s ease,
-        box-shadow .15s ease;
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      border-color: rgba(255, 210, 26, .75);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, .4);
+      border-color: rgba(255, 210, 26, 0.75);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
     }
 
     .icon {
       width: 45px;
       height: 45px;
       border-radius: 12px;
+
       display: grid;
       place-items: center;
+
       background: var(--gold);
       color: #080808;
+
       font-size: 22px;
       flex: none;
     }
@@ -146,6 +166,10 @@
       color: var(--gold);
     }
 
+    /* =========================
+       FOOTER
+       ========================= */
+
     .note {
       text-align: center;
       color: #aaa;
@@ -160,6 +184,10 @@
       margin-top: 20px;
       line-height: 1.6;
     }
+
+    /* =========================
+       MOBILE
+       ========================= */
 
     @media (max-width: 430px) {
       .wrap {
@@ -181,14 +209,21 @@
 
   <main class="wrap">
 
-    <!-- TOP IMAGE -->
+    <!-- ==================================================
+         ONLY IMAGE ON THE PAGE
+         ================================================== -->
+
     <img
       class="top-image"
-      src="https://raw.githubusercontent.com/mymusicspeaks/mymusicspeaks.github.io/main/speaks2.jpeg"
+      src="speaks2.jpeg"
       alt="Speak Jesus event flyer"
     >
 
-    <!-- EVENT INFORMATION -->
+
+    <!-- ==================================================
+         EVENT INFORMATION
+         ================================================== -->
+
     <section class="brand">
 
       <div class="event-title">
@@ -205,16 +240,23 @@
 
     </section>
 
-    <!-- BUTTONS -->
+
+    <!-- ==================================================
+         EVENT LINKS
+         ================================================== -->
+
     <section class="buttons" aria-label="Event links">
 
-      <!-- TICKET -->
+
+      <!-- PURCHASE TICKET -->
+
       <a
         class="btn"
         href="https://www.mymusicspeaks.org/"
         target="_blank"
         rel="noopener noreferrer"
       >
+
         <div class="icon">🎟️</div>
 
         <div>
@@ -223,14 +265,17 @@
         </div>
 
         <div class="arrow">›</div>
+
       </a>
 
 
       <!-- EMAIL -->
+
       <a
         class="btn"
         href="mailto:mymusicspeaksllc@gmail.com?subject=Speak%20Jesus%20Event%20Enquiry"
       >
+
         <div class="icon">✉️</div>
 
         <div>
@@ -239,16 +284,19 @@
         </div>
 
         <div class="arrow">›</div>
+
       </a>
 
 
-      <!-- DONATION -->
+      <!-- DONATE -->
+
       <a
         class="btn"
         href="https://cash.app/$AnniskaCelestine"
         target="_blank"
         rel="noopener noreferrer"
       >
+
         <div class="icon">♥</div>
 
         <div>
@@ -257,9 +305,15 @@
         </div>
 
         <div class="arrow">›</div>
+
       </a>
 
     </section>
+
+
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
 
     <p class="note">
       Thank you for supporting My Music Speaks.
